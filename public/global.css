@@ -1,0 +1,312 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: rgb(0, 100, 200);
+  text-decoration: none;
+}
+
+.night a {
+  color: rgb(76, 154, 233);
+}
+
+label {
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-padding: 0.4em 0;
+  padding: 0.4em;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.night input,
+.night button,
+.night select,
+.night textarea {
+  border: 1px solid #555;
+}
+
+input:disabled {
+  color: #ccc;
+}
+
+ul {
+  list-style: none;
+}
+
+#app {
+  width: 100%;
+  position: absolute;
+  min-height: 100%;
+  padding-top: 12px;
+}
+
+.night {
+  color: #efefef;
+  background-color: #111;
+}
+
+.day {
+  background-color: #ccc;
+  color: #555;
+}
+
+.day .todo-list {
+  background-color: #eae7dc;
+  box-shadow: 1px 1px 8px 2px rgba(115, 115, 115, 0.2);
+}
+
+.night .todo-list {
+  background-color: #222;
+  box-shadow: 1px 1px 8px 2px rgb(0, 0, 0, 0.8);
+}
+
+.active-todo {
+  transition: background-color 0.1s;
+  background-color: rgb(0, 0, 0, 0.05);
+}
+
+.night .active-todo {
+  background-color: #444;
+}
+
+.day button,
+.day input,
+.day select {
+  background-color: #ffffff38;
+  /* border-radius: 8px; */
+  outline: none;
+  color: #666;
+}
+
+.day .todo-right button {
+  background-color: #e2ddca;
+}
+
+.day input:focus,
+.day select:focus {
+  background-color: #ffffff88;
+}
+
+.night button,
+.night input,
+.night select {
+  background-color: #333;
+  color: #efefef;
+}
+
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.night .modal-bg {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.modal {
+  background-color: #fff;
+  box-shadow: 1px 1px 8px 2px rgb(0, 0, 0, 0.2);
+}
+
+.day .modal {
+  background-color: #eae7dc;
+}
+
+.night .modal {
+  background-color: #1f1f1f;
+  box-shadow: 1px 1px 8px 2px rgb(0, 0, 0, 0.8);
+}
+
+.todo-list {
+  border-radius: 12px;
+}
+
+.night .todo-list .quest {
+  border-left: solid 9px yellow;
+}
+
+.night .todo-list .training {
+  border-left: solid 9px blueviolet;
+}
+
+.day .todo-list .quest {
+  border-left: solid 9px darkorange;
+}
+
+.day .todo-list .training {
+  border-left: solid 9px darkmagenta;
+}
+
+.day .todo-right button {
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgb(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+.day button:focus {
+  opacity: 0.5;
+}
+
+.day .day-night-toggle .switch {
+  background-color: #e2ddca;
+  box-shadow: 1px 1px 2px 1px rgb(0, 0, 0, 0.5);
+}
+
+.night .day-night-toggle .switch {
+  background-color: #aaa;
+  border: solid 1px #111;
+}
+
+.night .day-night-toggle .slider {
+  background-color: #ccc;
+  border: solid 1px #111;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 150%;
+  right: 0;
+  font-size: 14px;
+}
+
+.dropdown button:focus + .dropdown-content, .dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content a, .dropdown-content li {
+  padding: 6px;
+}
+
+.dropdown-content a:hover {
+  display: block;
+  background-color: #ffffff38;
+}
+
+.dropdown-content {
+  box-shadow: 1px 1px 8px 2px rgba(115, 115, 115, 0.2);
+  z-index: 1;
+}
+
+.day .dropdown-content {
+  background-color: #eae7dc;
+}
+
+.night .dropdown-content {
+  background-color: #333;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  margin: 12px 0;
+}
+
+.calendar {
+  box-shadow: 1px 1px 2px 1px rgb(0, 0, 0, 0.1);
+}
+
+.day .calendar {
+  background-color: #e2ddca;
+}
+
+.night .calendar {
+  background-color: #333;
+  box-shadow: 1px 1px 2px 1px rgb(0, 0, 0, 0.8);
+}
+
+.calendar .today {
+  border: solid 1px black;
+}
+
+.night .calendar .today {
+  border: solid 1px #eee;
+}
+
+.calendar .header {
+  width: fit-content;
+  margin: auto;
+}
+
+.night .calendar .header button {
+  opacity: 0.5;
+}
+
+.todo-time {
+  font-style: italic;
+}
+
+.notifications.dropdown-content {
+  left: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #app {
+    font-size: smaller;
+  }
+  .container {
+    width: 95% !important;
+  }
+
+  .modal {
+    width: 90% !important;
+  }
+
+  li {
+    padding: 6px !important;
+  }
+
+  .todo-time {
+    position: absolute;
+    right: 150px;
+    width: 100%;
+    top: 24px;
+    font-size: smaller;
+    min-width: 100px;
+  }
+}
