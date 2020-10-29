@@ -6,6 +6,7 @@
   import TodoEditor from "./TodoEditor.svelte";
   import { todoList } from "./stores/todoList";
   import { time } from "./stores/time";
+  import { loc } from "./stores/loc";
   import { deriveTodoListStore } from "./stores/deriveTodoListStore";
   import { calculateAge, parseDate } from "./helpers";
 
@@ -104,9 +105,12 @@
 </style>
 
 <ul class="todo-list">
+  {#if $localStore.length === 0}
+    <li>{$loc['addSomeTodos']}</li>
+  {/if}
   {#each $localStore as item, index (item.sourceIndex)}
     <li
-      class={`${item.sourceIndex === coloredItemIndex ? 'active-todo' : 'inactive-todo'} ${item.expired ? "expired" : ""} ${item.sourceIndex === checkedIndex ? 'checked' : ''} ${item.sourceIndex === editingTodoIndex ? 'editing' : ''} ${item.type === 0 ? 'quest' : 'training'}`}
+      class={`${item.sourceIndex === coloredItemIndex ? 'active-todo' : 'inactive-todo'} ${item.expired ? 'expired' : ''} ${item.sourceIndex === checkedIndex ? 'checked' : ''} ${item.sourceIndex === editingTodoIndex ? 'editing' : ''} ${item.type === 0 ? 'quest' : 'training'}`}
       on:click={() => focusNewPos(item.sourceIndex)}>
       {#if item.sourceIndex === editingTodoIndex}
         <div on:click|stopPropagation class="todo-editor">

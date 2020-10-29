@@ -70,5 +70,9 @@ export const localization = {
     "timeLimit": {
         "ro": "Limită de timp",
         "en": "Time Limit"
+    },
+    "addSomeTodos": {
+        "ro": "Adaugă niște sarcini!",
+        "en": "Add some Todos!"
     }
 }
