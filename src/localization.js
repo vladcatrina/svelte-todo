@@ -74,5 +74,9 @@ export const localization = {
     "addSomeTodos": {
         "ro": "Adaugă niște sarcini!",
         "en": "Add some Todos!"
+    },
+    "addSomeSkills": {
+        "ro": "Adaugă niște abilități!",
+        "en": "Add some skills!"
     }
 }

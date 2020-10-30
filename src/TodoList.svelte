@@ -47,7 +47,7 @@
       try {
         todoList.complete(index);
       } catch (e) {
-        alert(e);
+        alert($loc[e] || e);
       }
       checkedIndex = -1;
     }, 1500);
