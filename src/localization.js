@@ -78,5 +78,9 @@ export const localization = {
     "addSomeSkills": {
         "ro": "Adaugă niște abilități!",
         "en": "Add some skills!"
+    },
+    "skillInsufficient": {
+        "ro": "Abilitate insuficientă!",
+        "en": "Insufficient skill!"
     }
 }
