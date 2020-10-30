@@ -50,14 +50,14 @@
 
     <div class="menu">
       <div class="dropdown">
-        <button> 📧 Notifications {#if $notifications.length > 0}<b>!</b>{/if} </button>
+        <button> 📧 {$loc['notifications']} {#if $notifications.length > 0}<b>!</b>{/if} </button>
         <div class="notifications dropdown-content">
           <Notifications />
         </div>
       </div>
 
       <div class="dropdown">
-        <button>🔧 Options</button>
+        <button>🔧 {$loc['options']}</button>
         <div class="dropdown-content">
           {#if $display.separateDisplay}
             <a on:click={display.setMixedDisplay}>{$loc['viewMixed']}</a>

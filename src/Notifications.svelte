@@ -8,7 +8,7 @@
 <div>
   <ul>
     {#if $notifications.length === 0}
-    <li>No notifications</li>
+    <li>{$loc["noNotifications"]}</li>
     {/if}
     {#each $notifications as notif}
       <li>

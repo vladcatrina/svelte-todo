@@ -82,5 +82,17 @@ export const localization = {
     "skillInsufficient": {
         "ro": "Abilitate insuficientă!",
         "en": "Insufficient skill!"
-    }
+    },
+    "options": {
+        "en": "Options",
+        "ro": "Opțiuni"
+    },
+    "notifications": {
+        "en": "Notifications",
+        "ro": "Notificări"
+    },
+    "noNotifications": {
+        "en": "No notifications",
+        "ro": "Nu sunt notificări"
+    },
 }
